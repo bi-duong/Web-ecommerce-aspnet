@@ -1,0 +1,33 @@
+﻿@model BanHangOnl.Models.EF.Posts
+@{
+    ViewBag.Title = "Detail";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/single_styles.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/single_responsive.css">
+<link rel="stylesheet" href="~/Content/assets/plugins/themify-icons/themify-icons.css">
+
+@if (Model != null)
+{
+    <div class="container single_product_container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="product_details" style="padding-top:100px">
+                <div class="product_details_title">
+                    <h2>@Model.Title</h2>
+                    <h4>@Model.Description</h4>
+                    <img src="@Model.Image">
+                    <div class="row" style="margin:10px;">
+                        @Html.Raw(Model.Detail)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section scripts{
+    <script src="~/Content/assets/js/single_custom.js"></script>
+}
+
+
+
